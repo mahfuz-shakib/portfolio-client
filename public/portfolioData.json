@@ -1,0 +1,140 @@
+[
+  {
+    "_id": "user_001",
+    "name": "Mahfuzur Rahman",
+    "role": "Frontend Developer",
+    "tagline": "I build modern, interactive and user-centric web experiences.",
+    "profileImage": "https://i.ibb.co.com/1JfdjCpR/IMG-0267d.jpg",
+    "location": "Dhaka, Bangladesh",
+    "email": "mahfuzshakib301@gmail.com",
+    "resumeUrl": "https://yourcdn.com/resume.pdf"
+  },
+  {
+    "_id": "social_001",
+    "userId": "user_001",
+    "links": [
+      {
+        "platform": "Github",
+        "url": "https://github.com/mahfuz-shakib",
+        "icon": "github"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/mahfuz-shakib",
+        "icon": "linkedin"
+      },
+      {
+        "platform": "Facebook",
+        "url": "https://www.facebook.com/mahfuz.shakib.73113528/",
+        "icon": "facebook"
+      }
+    ]
+  },
+  {
+    "_id": "about_001",
+    "userId": "user_001",
+    "intro": "I’m a passionate Frontend Developer currently in my final year of CSE.",
+    "longDescription": "I love creating user-friendly and scalable web applications with a strong focus on UI/UX. I work mostly with React, Tailwind, Firebase, and have started exploring backend development with Node, Express, and MongoDB.",
+    "interests": ["UI/UX Design", "Open Source Contribution", "Tech Blogging", "Football"],
+    "strengths": ["Analytical Thinking", "Problem Solving", "Team Collaboration", "Adaptability"]
+  },
+  {
+    "_id": "skill_001",
+    "userId": "user_001",
+    "categories": [
+      {
+        "category": "Frontend",
+        "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Framer Motion", "DaisyUI"]
+      },
+      {
+        "category": "Backend",
+        "skills": ["Node.js", "Express.js", "MongoDB", "Firebase"]
+      },
+      {
+        "category": "Problem Solving",
+        "skills": ["Data Structures", "Algorithms", "Time Complexity", "LeetCode", "Codeforces"]
+      },
+      {
+        "category": "Tools",
+        "skills": ["Git", "VS Code", "Figma", "NPM", "Postman"]
+      },
+      {
+        "category": "Other",
+        "skills": ["REST APIs", "Responsive Design"]
+      }
+    ]
+  },
+  {
+    "_id": "project_000",
+    "userId": "user_001",
+    "projects": [
+      {
+        "_id": "project_001",
+        "userId": "user_001",
+        "title": "TaskFlow - Task Management App",
+        "description": "A task management web app with login, CRUD tasks, routing, and Framer Motion animations.",
+        "thumbnail": "https://yourcdn.com/taskflow.png",
+        "techStack": ["React", "Firebase Auth", "Tailwind", "Framer Motion"],
+        "liveUrl": "https://taskflow.vercel.app",
+        "githubUrl": "https://github.com/johndoe/taskflow",
+        "features": [
+          "User authentication with Firebase",
+          "Add, edit, delete and filter tasks",
+          "Smooth UI animations and micro-interactions"
+        ],
+        "isFeatured": true
+      },
+      {
+        "_id": "project_002",
+        "userId": "user_001",
+        "title": "Foodie - Restaurant Landing Page",
+        "description": "Modern fully responsive landing page for a restaurant brand.",
+        "thumbnail": "https://yourcdn.com/foodie.png",
+        "techStack": ["React", "Tailwind", "DaisyUI"],
+        "liveUrl": "https://foodie.vercel.app",
+        "githubUrl": "https://github.com/johndoe/foodie",
+        "features": [
+          "Pixel-perfect UI using Tailwind+DaisyUI",
+          "Responsive mobile-first UI",
+          "Animated hero and navigation"
+        ],
+        "isFeatured": false
+      }
+    ]
+  },
+  {
+    "_id": "edu_001",
+    "userId": "user_001",
+    "degree": "BSc in Computer Science & Engineering",
+    "institution": "Gopalganj Science and Technology University",
+    "startYear": 2021,
+    "endYear": 2025,
+    "cgpa": "3.50/4.00",
+    "details": "Focusing on software engineering, data structures, and web development."
+  },
+  {
+    "_id": "certifications_001",
+    "userId": "user_001",
+    "certificates": [
+      {
+        "name": "Complete Web Development",
+        "issuer": "Programming Hero",
+        "date": "2023",
+        "credentialUrl": "https://credential-url.com"
+      }
+    ]
+  },
+  {
+    "_id": "exp_001",
+    "userId": "user_001",
+    "role": "Frontend Developer Intern",
+    "company": "TechHive Ltd.",
+    "startDate": "2025-01",
+    "endDate": "2025-06",
+    "responsibilities": [
+      "Built reusable UI components using React & Tailwind",
+      "Improved performance and accessibility across products",
+      "Collaborated with designers to implement UI/UX improvements"
+    ]
+  }
+]

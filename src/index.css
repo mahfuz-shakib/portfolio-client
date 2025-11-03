@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(var(--b2));
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--p));
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--pf));
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes gradient-x {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-gradient-x {
+    background-size: 200% auto;
+    animation: gradient-x 3s ease infinite;
+}
+
+/* Selection color */
+::selection {
+    background-color: hsl(var(--p));
+    color: hsl(var(--pc));
+}
+
+/* Delay utilities */
+.delay-1000 {
+    animation-delay: 1000ms;
+}
