@@ -42,12 +42,22 @@ const Navbar = () => {
             }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    {/* Left Spacer for Desktop - to center the nav items */}
-                    <div className="w-32 hidden md:block"></div>
+                <div className="flex justify-between items-center h-16">
+                    {/* Left Logo */}
+                    <motion.a
+                        href="#home"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            scrollToSection('#home');
+                        }}
+                        whileHover={{ scale: 1.05 }}
+                        className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent cursor-pointer"
+                    >
+                        &lt;Mahfuz/&gt;
+                    </motion.a>
 
                     {/* Desktop Navigation - Centered */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
                         {navItems.map((item, index) => (
                             <motion.a
                                 key={item.name}
@@ -59,7 +69,7 @@ const Navbar = () => {
                                     e.preventDefault();
                                     scrollToSection(item.href);
                                 }}
-                                className="text-base-content/80 hover:text-primary transition-colors duration-200 cursor-pointer font-medium text-sm uppercase tracking-wide relative group"
+                                className="text-base-content/80 hover:text-primary transition-colors duration-200 cursor-pointer relative group"
                             >
                                 {item.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -68,7 +78,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Right Side - Resume Download Button */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 ml-auto">
                         {data?.userInfo && (
                             <motion.a
                                 href={data.userInfo.resumeUrl}

@@ -44,11 +44,11 @@
     "categories": [
       {
         "category": "Frontend",
-        "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Framer Motion", "DaisyUI"]
+        "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Framer Motion", "DaisyUI","Responsive Design"]
       },
       {
         "category": "Backend",
-        "skills": ["Node.js", "Express.js", "MongoDB", "Firebase"]
+        "skills": ["Node.js", "Express.js", "MongoDB", "Firebase","REST APIs"]
       },
       {
         "category": "Problem Solving",
@@ -57,10 +57,6 @@
       {
         "category": "Tools",
         "skills": ["Git", "VS Code", "Figma", "NPM", "Postman"]
-      },
-      {
-        "category": "Other",
-        "skills": ["REST APIs", "Responsive Design"]
       }
     ]
   },

@@ -2,6 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { usePortfolioData } from '../hooks/usePortfolioData';
 import Container from '../container/Container';
+import { FaCode } from 'react-icons/fa';
+import {
+    SiHtml5,
+    SiCss3,
+    SiJavascript,
+    SiReact,
+    SiTailwindcss,
+    SiFramer,
+    SiNodedotjs,
+    SiExpress,
+    SiMongodb,
+    SiFirebase,
+    SiLeetcode,
+    SiCodeforces,
+    SiGit,
+    SiFigma,
+    SiNpm,
+    SiPostman
+} from 'react-icons/si';
 
 const Skills = () => {
     const data = usePortfolioData();
@@ -9,6 +28,48 @@ const Skills = () => {
     if (!data || !data.skills) return null;
 
     const { skills } = data;
+
+    const iconMap = {
+        'HTML': SiHtml5,
+        'CSS': SiCss3,
+        'JavaScript': SiJavascript,
+        'React': SiReact,
+        'Tailwind CSS': SiTailwindcss,
+        'Framer Motion': SiFramer,
+        'DaisyUI': SiTailwindcss,
+        'Node.js': SiNodedotjs,
+        'Express.js': SiExpress,
+        'MongoDB': SiMongodb,
+        'Firebase': SiFirebase,
+        'LeetCode': SiLeetcode,
+        'Codeforces': SiCodeforces,
+        'Git': SiGit,
+        'VS Code': FaCode,
+        'Figma': SiFigma,
+        'NPM': SiNpm,
+        'Postman': SiPostman,
+    };
+
+    const brandColors = {
+        'HTML': '#E34F26',
+        'CSS': '#1572B6',
+        'JavaScript': '#F7DF1E',
+        'React': '#61DAFB',
+        'Tailwind CSS': '#38BDF8',
+        'Framer Motion': '#E10098',
+        'DaisyUI': '#1AD1A5',
+        'Node.js': '#339933',
+        'Express.js': '#000000',
+        'MongoDB': '#47A248',
+        'Firebase': '#FFCA28',
+        'LeetCode': '#FFA116',
+        'Codeforces': '#1F8ACB',
+        'Git': '#F05032',
+        'VS Code': '#007ACC',
+        'Figma': '#F24E1E',
+        'NPM': '#CB3837',
+        'Postman': '#FF6C37',
+    };
 
     const getIconColor = (category) => {
         const colors = {
@@ -42,17 +103,6 @@ const Skills = () => {
         },
     };
 
-    const skillVariants = {
-        hidden: { scale: 0 },
-        visible: {
-            scale: 1,
-            transition: {
-                type: "spring",
-                stiffness: 200,
-            },
-        },
-    };
-
     return (
         <section id="skills" className="py-20 bg-base-200">
             <Container>
@@ -74,35 +124,40 @@ const Skills = () => {
                         </p>
                     </motion.div>
 
-                    {/* Skills Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {skills.map((category, index) => (
-                            <motion.div
-                                key={category.category}
-                                variants={itemVariants}
-                                whileHover={{ scale: 1.05 }}
-                                className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow"
-                            >
-                                <div className="card-body">
-                                    <h3 className={`card-title ${getIconColor(category.category)}`}>
-                                        {category.category}
-                                    </h3>
-                                    <div className="divider my-2"></div>
-                                    <div className="flex flex-wrap gap-2">
-                                        {category.skills.map((skill, skillIndex) => (
-                                            <motion.span
-                                                key={skill}
-                                                variants={skillVariants}
-                                                initial="hidden"
-                                                whileInView="visible"
-                                                viewport={{ once: true }}
-                                                transition={{ delay: (index * 0.1) + (skillIndex * 0.05) }}
-                                                className="badge badge-lg badge-outline hover:badge-primary transition-colors cursor-default"
+                    {/* Category-wise Skill Sections */}
+                    <div className="space-y-8">
+                        {skills.map((category, cIdx) => (
+                            <motion.div key={category.category} variants={itemVariants} className="space-y-4">
+                                <div className="flex items-center gap-3">
+                                    <h3 className="text-2xl font-bold text-base-content">{category.category}</h3>
+                                    <div className="h-1 w-16 bg-gradient-to-r from-primary to-secondary rounded-full"/>
+                                </div>
+                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                                    {category.skills.map((skill, sIdx) => {
+                                        const Icon = iconMap[skill] || FaCode;
+                                        const color = brandColors[skill] || 'hsl(var(--p))';
+                                        const soft = `${color}20`;
+                                        return (
+                                            <motion.div
+                                                key={`${category.category}-${skill}`}
+                                                variants={itemVariants}
+                                                whileHover={{ y: -6, scale: 1.03 }}
+                                                className="card bg-base-100 shadow-lg hover:shadow-2xl border border-base-300/60 transition-all"
                                             >
-                                                {skill}
-                                            </motion.span>
-                                        ))}
-                                    </div>
+                                                <div className="card-body items-center text-center p-4 md:p-5">
+                                                    <div
+                                                        className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3"
+                                                        style={{ backgroundColor: soft }}
+                                                    >
+                                                        <Icon style={{ color }} className="text-2xl md:text-3xl" />
+                                                    </div>
+                                                    <h4 className="font-semibold text-sm md:text-base text-base-content/90">
+                                                        {skill}
+                                                    </h4>
+                                                </div>
+                                            </motion.div>
+                                        );
+                                    })}
                                 </div>
                             </motion.div>
                         ))}

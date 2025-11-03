@@ -69,7 +69,7 @@ const Projects = () => {
                                         alt={project.title}
                                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                                         onError={(e) => {
-                                            e.target.src = 'https://via.placeholder.com/600x400?text=Project+Image';
+                                            e.target.src = 'https://placehold.co/600x400?text=Project%20Image';
                                         }}
                                     />
                                     {project.isFeatured && (
