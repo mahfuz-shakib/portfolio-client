@@ -125,38 +125,55 @@ const Skills = () => {
                     </motion.div>
 
                     {/* Category-wise Skill Sections */}
-                    <div className="space-y-8">
-                        {skills.map((category, cIdx) => (
-                            <motion.div key={category.category} variants={itemVariants} className="space-y-4">
+                    <div className="space-y-8 md:grid grid-cols-7 gap-x-5">
+                        {skills.map((category,index, cIdx) => (
+                            <motion.div key={category.category} variants={itemVariants} className={`space-y-4 border border-gray-700 rounded p-5 hover:scale-101 ${
+                                index===0 ? "col-span-7":index===1?"col-span-5":index===2?"col-span-2 row-span-2 h-full":"col-span-5"
+                            }`}>
                                 <div className="flex items-center gap-3">
                                     <h3 className="text-2xl font-bold text-base-content">{category.category}</h3>
                                     <div className="h-1 w-16 bg-gradient-to-r from-primary to-secondary rounded-full"/>
                                 </div>
-                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                                <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 md:gap-6 ${index===0?"md:!grid-cols-7":index===1?"md:!grid-cols-5 md:!grid-rows-1":index===2?"md:!grid-cols-2 ":"md:!grid-cols-5"}`}>
                                     {category.skills.map((skill, sIdx) => {
                                         const Icon = iconMap[skill] || FaCode;
-                                        const color = brandColors[skill] || 'hsl(var(--p))';
+                                        const color = brandColors[skill] || '#757555';
                                         const soft = `${color}20`;
-                                        return (
-                                            <motion.div
-                                                key={`${category.category}-${skill}`}
-                                                variants={itemVariants}
-                                                whileHover={{ y: -6, scale: 1.03 }}
-                                                className="card bg-base-100 shadow-lg hover:shadow-2xl border border-base-300/60 transition-all"
+                                return (
+                                    <motion.div
+                                        key={`${category.category}-${skill}`}
+                                        variants={itemVariants}
+                                        whileHover={{ y: -8, scale: 1.04, rotate: -1 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        className="card shadow-xl bg-[#04043754]  hover:shadow-2xl transition-all"
+                                        style={{
+                                            border: `1px solid ${color}55`,
+                                            // background:
+                                                // `linear-gradient(180deg, ${soft}, transparent 60%), var(--fallback-b1,oklch(var(--b1)/1))`,
+                                            boxShadow: `0 8px 28px -8px ${color}66`
+                                        }}
+                                    >
+                                        <div className="card-body items-center text-center p-4 md:p-5">
+                                            <div
+                                                className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 backdrop-blur-sm"
+                                                style={{ backgroundColor: soft, boxShadow: `inset 0 0 0 1px ${color}55` }}
                                             >
-                                                <div className="card-body items-center text-center p-4 md:p-5">
-                                                    <div
-                                                        className="w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3"
-                                                        style={{ backgroundColor: soft }}
-                                                    >
-                                                        <Icon style={{ color }} className="text-2xl md:text-3xl" />
-                                                    </div>
-                                                    <h4 className="font-semibold text-sm md:text-base text-base-content/90">
-                                                        {skill}
-                                                    </h4>
-                                                </div>
-                                            </motion.div>
-                                        );
+                                                <Icon style={{ color }} className="text-2xl md:text-3xl" />
+                                            </div>
+                                            <h4 className="font-semibold text-sm md:text-base text-base-content/90">
+                                                {skill}
+                                            </h4>
+                                            <div className="w-full mt-2">
+                                                <div
+                                                    className="h-1 rounded-full bg-linear-to-r from-indigo-700 to-pink-500"
+                                                    style={{
+                                                        background: `linear-gradient(90deg, ${color}, ${color}66)`
+                                                    }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
                                     })}
                                 </div>
                             </motion.div>

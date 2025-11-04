@@ -20,7 +20,8 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-base-300 py-12 border-t border-base-content/10">
+        <footer className="bg-base-300 py-12 border-t border-base-content/10 relative">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary" />
             <Container>
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                     {/* Copyright */}

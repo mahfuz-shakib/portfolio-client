@@ -71,7 +71,7 @@ const Contact = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="space-y-12"
+                    className="space-y-12 lg:max-w-5xl lg:mx-auto"
                 >
                     {/* Section Header */}
                     <motion.div variants={itemVariants} className="text-center space-y-4">
@@ -149,20 +149,20 @@ const Contact = () => {
                         {/* Contact Form */}
                         <motion.div variants={itemVariants}>
                             <form onSubmit={handleSubmit} className="card bg-base-100 shadow-xl">
-                                <div className="card-body">
+                                <div className="card-body mx-auto w-sm">
                                     <h3 className="text-2xl font-bold mb-4">Send a Message</h3>
                                     
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-semibold">Name</span>
-                                        </label>
+                                        </label><br/>
                                         <input
                                             type="text"
                                             name="name"
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="input input-bordered"
+                                            className="input input-bordered w-full"
                                             placeholder="Your Name"
                                         />
                                     </div>
@@ -170,22 +170,22 @@ const Contact = () => {
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-semibold">Email</span>
-                                        </label>
+                                        </label><br/>
                                         <input
                                             type="email"
                                             name="email"
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="input input-bordered"
+                                            className="input input-bordered w-full"
                                             placeholder="your.email@example.com"
                                         />
                                     </div>
 
-                                    <div className="form-control">
+                                    {/* <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-semibold">Subject</span>
-                                        </label>
+                                        </label><br/>
                                         <input
                                             type="text"
                                             name="subject"
@@ -195,23 +195,23 @@ const Contact = () => {
                                             className="input input-bordered"
                                             placeholder="Subject"
                                         />
-                                    </div>
+                                    </div> */}
 
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-semibold">Message</span>
-                                        </label>
+                                        </label><br/>
                                         <textarea
                                             name="message"
                                             value={formData.message}
                                             onChange={handleChange}
                                             required
-                                            className="textarea textarea-bordered h-32"
+                                            className="textarea textarea-bordered h-24 w-full"
                                             placeholder="Your message here..."
                                         />
                                     </div>
 
-                                    <div className="form-control mt-6">
+                                    <div className="form-control mt-6 text-right">
                                         <button type="submit" className="btn btn-primary btn-lg">
                                             Send Message
                                         </button>

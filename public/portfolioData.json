@@ -44,15 +44,15 @@
     "categories": [
       {
         "category": "Frontend",
-        "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Framer Motion", "DaisyUI","Responsive Design"]
+        "skills": ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS", "Framer Motion", "DaisyUI"]
       },
       {
         "category": "Backend",
-        "skills": ["Node.js", "Express.js", "MongoDB", "Firebase","REST APIs"]
+        "skills": ["Node.js", "Express.js", "MongoDB", "Firebase", "REST APIs"]
       },
       {
         "category": "Problem Solving",
-        "skills": ["Data Structures", "Algorithms", "Time Complexity", "LeetCode", "Codeforces"]
+        "skills": ["Data Structures", "Algorithms", "LeetCode", "Codeforces"]
       },
       {
         "category": "Tools",
@@ -69,7 +69,7 @@
         "userId": "user_001",
         "title": "TaskFlow - Task Management App",
         "description": "A task management web app with login, CRUD tasks, routing, and Framer Motion animations.",
-        "thumbnail": "https://yourcdn.com/taskflow.png",
+        "thumbnail": "/Capture.PNG",
         "techStack": ["React", "Firebase Auth", "Tailwind", "Framer Motion"],
         "liveUrl": "https://taskflow.vercel.app",
         "githubUrl": "https://github.com/johndoe/taskflow",
@@ -85,7 +85,71 @@
         "userId": "user_001",
         "title": "Foodie - Restaurant Landing Page",
         "description": "Modern fully responsive landing page for a restaurant brand.",
-        "thumbnail": "https://yourcdn.com/foodie.png",
+        "thumbnail": "/greennest.PNG",
+        "techStack": ["React", "Tailwind", "DaisyUI"],
+        "liveUrl": "https://foodie.vercel.app",
+        "githubUrl": "https://github.com/johndoe/foodie",
+        "features": [
+          "Pixel-perfect UI using Tailwind+DaisyUI",
+          "Responsive mobile-first UI",
+          "Animated hero and navigation"
+        ],
+        "isFeatured": false
+      },
+      {
+        "_id": "project_003",
+        "userId": "user_001",
+        "title": "Foodie - Restaurant Landing Page",
+        "description": "Modern fully responsive landing page for a restaurant brand.",
+        "thumbnail": "englishJanala.PNG",
+        "techStack": ["React", "Tailwind", "DaisyUI"],
+        "liveUrl": "https://foodie.vercel.app",
+        "githubUrl": "https://github.com/johndoe/foodie",
+        "features": [
+          "Pixel-perfect UI using Tailwind+DaisyUI",
+          "Responsive mobile-first UI",
+          "Animated hero and navigation"
+        ],
+        "isFeatured": false
+      },
+      {
+        "_id": "project_003",
+        "userId": "user_001",
+        "title": "Foodie - Restaurant Landing Page",
+        "description": "Modern fully responsive landing page for a restaurant brand.",
+        "thumbnail": "heroapps.PNG",
+        "techStack": ["React", "Tailwind", "DaisyUI"],
+        "liveUrl": "https://foodie.vercel.app",
+        "githubUrl": "https://github.com/johndoe/foodie",
+        "features": [
+          "Pixel-perfect UI using Tailwind+DaisyUI",
+          "Responsive mobile-first UI",
+          "Animated hero and navigation"
+        ],
+        "isFeatured": false
+      },
+      {
+        "_id": "project_003",
+        "userId": "user_001",
+        "title": "Foodie - Restaurant Landing Page",
+        "description": "Modern fully responsive landing page for a restaurant brand.",
+        "thumbnail": "heroapps.PNG",
+        "techStack": ["React", "Tailwind", "DaisyUI"],
+        "liveUrl": "https://foodie.vercel.app",
+        "githubUrl": "https://github.com/johndoe/foodie",
+        "features": [
+          "Pixel-perfect UI using Tailwind+DaisyUI",
+          "Responsive mobile-first UI",
+          "Animated hero and navigation"
+        ],
+        "isFeatured": false
+      },
+      {
+        "_id": "project_003",
+        "userId": "user_001",
+        "title": "Foodie - Restaurant Landing Page",
+        "description": "Modern fully responsive landing page for a restaurant brand.",
+        "thumbnail": "heroapps.PNG",
         "techStack": ["React", "Tailwind", "DaisyUI"],
         "liveUrl": "https://foodie.vercel.app",
         "githubUrl": "https://github.com/johndoe/foodie",

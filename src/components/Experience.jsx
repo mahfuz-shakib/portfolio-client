@@ -60,12 +60,14 @@ const Experience = () => {
                     </motion.div>
 
                     {/* Experience Card */}
-                    <motion.div variants={itemVariants} className="card bg-base-100 shadow-xl">
-                        <div className="card-body">
+                    <motion.div variants={itemVariants} className="card shadow-2xl border border-base-300/60"
+                        style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
+                    >
+                        <div className="card-body p-8">
                             <div className="flex items-start gap-6">
                                 {/* Icon */}
                                 <div className="flex-shrink-0">
-                                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shadow-inner">
                                         <FaBriefcase className="text-primary text-2xl" />
                                     </div>
                                 </div>
@@ -98,7 +100,7 @@ const Experience = () => {
                                                     transition={{ delay: index * 0.1 }}
                                                     className="flex items-start gap-3 text-base-content/80"
                                                 >
-                                                    <span className="text-primary mt-1 text-xl">▸</span>
+                                                    <span className="mt-2 w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary inline-block" />
                                                     <span>{responsibility}</span>
                                                 </motion.li>
                                             ))}

@@ -52,12 +52,14 @@ const Education = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Education */}
-                        <motion.div variants={itemVariants} className="card bg-base-200 shadow-xl">
-                            <div className="card-body">
+                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border  border-gray-700 hover:scale-101"
+                            // style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
+                        >
+                            <div className="card-body p-8">
                                 <div className="flex items-start gap-6">
                                     {/* Icon */}
                                     <div className="flex-shrink-0">
-                                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
+                                        <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shadow-inner">
                                             <FaGraduationCap className="text-primary text-2xl" />
                                         </div>
                                     </div>
@@ -90,8 +92,10 @@ const Education = () => {
                         </motion.div>
 
                         {/* Certifications */}
-                        <motion.div variants={itemVariants} className="card bg-base-200 shadow-xl">
-                            <div className="card-body">
+                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border border-gray-700 hover:scale-101"
+                            // style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
+                        >
+                            <div className="card-body p-8">
                                 <h3 className="text-xl font-bold mb-6">Certifications</h3>
                                 <div className="space-y-4">
                                     {certifications.map((cert, index) => (
@@ -101,7 +105,7 @@ const Education = () => {
                                             whileInView={{ opacity: 1, x: 0 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="p-4 rounded-lg bg-base-100 hover:bg-base-300 transition-colors"
+                                            className="p-4 rounded-lg border border-gray-800 hover:border-gray-700 transition-colors"
                                         >
                                             <h4 className="font-semibold text-lg">{cert.name}</h4>
                                             <p className="text-primary font-medium">{cert.issuer}</p>

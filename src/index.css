@@ -1,14 +1,21 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+section{
+    /* background-color: rgba(61, 63, 92, 0.301); */
+    /* background-color: rgba(30, 31, 59, 0.301); */
+    background-color: rgba(7, 7, 36, 0.301);
+    background-image: url('/alwaysGrey.png');
+    background-attachment: fixed;
+}
 /* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 12px;
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background: hsl(var(--b2));
-}
+} */
 
 ::-webkit-scrollbar-thumb {
     background: hsl(var(--p));

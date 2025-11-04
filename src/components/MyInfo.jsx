@@ -49,7 +49,7 @@ const MyInfo = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 bg-gradient-to-br from-base-100 to-base-200"
+      className="min-h-screen flex items-center justify-center pt-20 bg-[url('/alwaysGre.png')]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
@@ -65,9 +65,9 @@ const MyInfo = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full"
+                className="inline-block px- py-2 bg-primay/10 borde border-primary/20 rounded-full"
               >
-                <span className="text-primary font-semibold">{userInfo.role}</span>
+                <span className="text-primar text-2xl font-semibold">Hi, I'm</span>
               </motion.div>
 
               <div className="space-y-4">
@@ -151,7 +151,7 @@ const MyInfo = () => {
               className="relative"
             >
               {/* Gradient Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl opacity-30 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30 animate-pulse"></div>
 
               {/* Profile Image */}
               <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20">
