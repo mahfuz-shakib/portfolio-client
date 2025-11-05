@@ -60,8 +60,8 @@ const Experience = () => {
                     </motion.div>
 
                     {/* Experience Card */}
-                    <motion.div variants={itemVariants} className="card shadow-2xl border border-base-300/60"
-                        style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
+                    <motion.div variants={itemVariants} className="card bg-[#8118710e shadow-2xl border border-purple-800"
+                        // style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
                     >
                         <div className="card-body p-8">
                             <div className="flex items-start gap-6">

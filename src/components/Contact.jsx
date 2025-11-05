@@ -148,7 +148,7 @@ const Contact = () => {
 
                         {/* Contact Form */}
                         <motion.div variants={itemVariants}>
-                            <form onSubmit={handleSubmit} className="card bg-base-100 shadow-xl">
+                            <form onSubmit={handleSubmit} className="card bg-[#15152054] border border-purple-800 shadow-xl">
                                 <div className="card-body mx-auto w-sm">
                                     <h3 className="text-2xl font-bold mb-4">Send a Message</h3>
                                     
@@ -162,7 +162,7 @@ const Contact = () => {
                                             value={formData.name}
                                             onChange={handleChange}
                                             required
-                                            className="input input-bordered w-full"
+                                            className="input input-bordered w-full hover:border-purple-900"
                                             placeholder="Your Name"
                                         />
                                     </div>
@@ -177,7 +177,7 @@ const Contact = () => {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="input input-bordered w-full"
+                                            className="input input-bordered w-full hover:border-purple-900"
                                             placeholder="your.email@example.com"
                                         />
                                     </div>
@@ -206,7 +206,7 @@ const Contact = () => {
                                             value={formData.message}
                                             onChange={handleChange}
                                             required
-                                            className="textarea textarea-bordered h-24 w-full"
+                                            className="textarea textarea-bordered h-24 w-full border hover:border-purple-900"
                                             placeholder="Your message here..."
                                         />
                                     </div>

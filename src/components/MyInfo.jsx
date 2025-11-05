@@ -56,10 +56,10 @@ const MyInfo = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center"
+          className="gri grid-cols-1 lg:grid-cols-2 flex flex-col-reverse lg:flex-row justify-between  gap-12 lg:gap-48 items-center"
         >
           {/* Left Side - Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 px-2 lg:px-0">
             <motion.div variants={itemVariants} className="space-y-6">
               <motion.div
                 initial={{ scale: 0 }}
@@ -71,14 +71,14 @@ const MyInfo = () => {
               </motion.div>
 
               <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-[32px] md:text-5xl md:text-6xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                     {userInfo.name}
                   </span>
                 </h1>
 
                 <div className="h-16 md:h-20 flex items-center">
-                  <h2 className="text-3xl md:text-3xl font-bold text-base-content/80">
+                  <h2 className="text-xl md:text-3xl font-bold text-base-content/80">
                     I'm a{" "}
                     <span className="text-primary">
                       <TypingEffect texts={typingStrings} typingSpeed={100} eraseSpeed={50} delayBetween={1500} />
@@ -93,11 +93,11 @@ const MyInfo = () => {
             {/* Location and Email */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 text-base-content/60">
               <div className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-primary" />
+                <FaMapMarkerAlt className="text-fuchsia-800" />
                 <span>{userInfo.location}</span>
               </div>
               <div className="flex items-center gap-2">
-                <FaEnvelope className="text-primary" />
+                <FaEnvelope className="text-purple-600" />
                 <span>{userInfo.email}</span>
               </div>
             </motion.div>
@@ -154,7 +154,7 @@ const MyInfo = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30 animate-pulse"></div>
 
               {/* Profile Image */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-primary/20">
+              <div className="relative w-68 h-72 md:w-96 md:h-[420px] rounded-full overflow-hidden border-4 border-primary/20">
                 <img
                   src={userInfo.profileImage}
                   alt={userInfo.name}

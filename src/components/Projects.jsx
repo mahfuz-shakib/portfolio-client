@@ -60,7 +60,7 @@ const Projects = () => {
                 key={project._id}
                 variants={itemVariants}
                 whileHover={{ y: -10, scale: 1.01 }}
-                className="card bg-[#15152054] shadow-2xl transition-all overflow-hidden group border border-gray-700"
+                className="card bg-[#15152054] shadow-2xl transition-all overflow-hidden group border border-purple-800"
                 style={{
                 //   background: "linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)",
                   // border: '1px solid hsl(var(--bc) / .15)',

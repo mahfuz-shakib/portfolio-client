@@ -4,8 +4,13 @@
 section{
     /* background-color: rgba(61, 63, 92, 0.301); */
     /* background-color: rgba(30, 31, 59, 0.301); */
-    background-color: rgba(7, 7, 36, 0.301);
+    background-color: #0707244d;
+    /* background-color: #92d0fc29; */
+    /* background-color:#8118710e ; */
+
     background-image: url('/alwaysGrey.png');
+    /* background-image: url('/crissxcross.png'); */
+    /* background-image: url('/axiomPattern.png'); */
     background-attachment: fixed;
 }
 /* Custom scrollbar */

@@ -21,10 +21,12 @@ const About = () => {
     <section id="about" className="py-24">
       <Container>
         {/* Header */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold mb-3">
+        <div className="text-center mb-14 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-">
             About <span className="text-primary">Me</span>
           </h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+
           <p className="text-base-content/70 max-w-xl mx-auto text-lg">
             A quick glimpse into who I am, what I do & what drives me.
           </p>
@@ -37,7 +39,7 @@ const About = () => {
             viewport={{ once: true }}
             className="space-y-6 max-w-5xl mx-auto"
           >
-            <div className="bg-[#15152054] shadow-xl border border-gray-700 rounded-2xl p-8 hover:scale-101">
+            <div className="bg-[#15152054] shadow-xl border border-purple-800 rounded-2xl p-8 hover:scale-101">
               <h3 className="text-xl font-bold mb-3">My Journey</h3>
               <p className="text-base-content/80 leading-relaxed">{about.intro}</p>
               <p className="text-base-content/80 mt-3 leading-relaxed">{about.longDescription}</p>
@@ -48,7 +50,7 @@ const About = () => {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           {/* Strengths */}
-          <div className="bg-[#15152054]  shadow-lg rounded-2xl border border-gray-700 p-8 hover:scale-101">
+          <div className="bg-[#15152054]  shadow-lg rounded-2xl border border-purple-800 p-8 hover:scale-101">
             <h3 className="text-xl font-bold mb-5 text-secondary">Core Strengths</h3>
             <div className="grid grid-cols-2 gap-5">
               {about.strengths.map((strength, idx) => {
@@ -69,7 +71,7 @@ const About = () => {
           </div>
 
           {/* Interests */}
-          <div className="bg-[#15152054] shadow-lg rounded-2xl border border-gray-700 p-8 hover:scale-101">
+          <div className="bg-[#15152054] shadow-lg rounded-2xl border border-purple-800 p-8 hover:scale-101">
             <h3 className="text-xl font-bold mb-5 text-primary">Interests</h3>
             <div className="grid grid-cols-2 gap-5">
               {about.interests.map((item, idx) => (

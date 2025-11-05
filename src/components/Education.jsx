@@ -52,7 +52,7 @@ const Education = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Education */}
-                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border  border-gray-700 hover:scale-101"
+                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border  border-purple-800 hover:scale-101"
                             // style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
                         >
                             <div className="card-body p-8">
@@ -92,7 +92,7 @@ const Education = () => {
                         </motion.div>
 
                         {/* Certifications */}
-                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border border-gray-700 hover:scale-101"
+                        <motion.div variants={itemVariants} className="card shadow-2xl bg-[#15152054] border border-purple-800 hover:scale-101"
                             // style={{ background: 'linear-gradient(180deg, hsl(var(--b2)) 0%, hsl(var(--b1)) 100%)' }}
                         >
                             <div className="card-body p-8">
