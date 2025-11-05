@@ -154,7 +154,7 @@ const MyInfo = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-30 animate-pulse"></div>
 
               {/* Profile Image */}
-              <div className="relative w-68 h-72 md:w-96 md:h-[420px] rounded-full overflow-hidden border-4 border-primary/20">
+              <div className="relative w-68 h-72 md:w-96 md:h-[396px] rounded-full overflow-hidden border-4 border-primary/20">
                 <img
                   src={userInfo.profileImage}
                   alt={userInfo.name}

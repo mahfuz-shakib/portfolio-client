@@ -54,7 +54,7 @@ const Projects = () => {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:px-16 gap-8 lg:gap-12">
             {projects.map((project, index) => (
               <motion.div
                 key={project._id}
@@ -96,13 +96,13 @@ const Projects = () => {
                   <p className="text-base-content/70 leading-relaxed">{project.description}</p>
 
                   {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 my-4">
+                  {/* <div className="flex flex-wrap gap-2 my-4">
                     {project.techStack.map((tech, techIndex) => (
                       <span key={techIndex} className="badge badge-outline">
                         {tech}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
 
                   {/* Features */}
                   {/* <div className="space-y-2">
