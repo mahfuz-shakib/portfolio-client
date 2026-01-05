@@ -4,13 +4,10 @@ import { DataContext } from "./DataContext.";
 const DataProvider = ({ children }) => {
   const [data, setData] = useState(null);
   console.log(data);
-  useEffect(() => {
-    // Fetch portfolio data from public folder
-    fetch("http://localhost:3000/user")
+  const loadData = () => {
+    return fetch("https://portfolio-server-tau-kohl.vercel.app/user")
       .then((response) => response.json())
       .then((portfolioData) => {
-        // Process the portfolio data
-        console.log(portfolioData);
         const userInfo = portfolioData.find((item) => item._id === "user_001");
         const socialLinks = portfolioData.find((item) => item._id === "social_001");
         const about = portfolioData.find((item) => item._id === "about_001");
@@ -30,13 +27,25 @@ const DataProvider = ({ children }) => {
           certifications: certifications?.certificates || [],
           experience,
         });
-      })
+      });
+  };
+  useEffect(() => {
+    loadData()
       .catch((error) => {
         console.error("Error loading portfolio data:", error);
       });
   }, []);
 
-  return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
+  const value = data
+    ? {
+        ...data,
+        refreshPortfolioData: loadData,
+        setUserInfo: (next) =>
+          setData((prev) => ({ ...prev, userInfo: typeof next === "function" ? next(prev.userInfo) : next })),
+      }
+    : null;
+
+  return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 };
 
 export default DataProvider;

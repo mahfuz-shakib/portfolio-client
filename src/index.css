@@ -9,8 +9,7 @@ section{
     /* background-color:#8118710e ; */
 
     background-image: url('/alwaysGrey.png');
-    /* background-image: url('/crissxcross.png'); */
-    /* background-image: url('/axiomPattern.png'); */
+    background-image: url('/crissxcross.png');
     background-attachment: fixed;
 }
 /* Custom scrollbar */

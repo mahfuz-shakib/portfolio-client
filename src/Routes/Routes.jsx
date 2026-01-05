@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router";
-import Home from "../pages/Home"
+import Home from "../pages/Home";
+import Admin from "../pages/Admin.jsx";
+
 export const router = createBrowserRouter([
-    {path:'/',Component:Home}
+    { path: '/', Component: Home },
+    { path: '/admin', Component: Admin },
 ])

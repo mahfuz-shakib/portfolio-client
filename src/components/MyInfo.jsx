@@ -17,7 +17,7 @@ const MyInfo = () => {
 
   const { userInfo, socialLinks } = data;
 
-  const typingStrings = ["Frontend Developer", "React Developer", "UI/UX Enthusiast", "Problem Solver"];
+  const typingStrings = ["Frontend Developer", "React Developer", "Problem Solver"];
 
   const iconMap = {
     github: FaGithub,
@@ -47,10 +47,7 @@ const MyInfo = () => {
   };
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center pt-20 bg-[url('/alwaysGre.png')]"
-    >
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 bg-[url('/alwaysGre.png')]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div
           variants={containerVariants}
@@ -71,7 +68,7 @@ const MyInfo = () => {
               </motion.div>
 
               <div className="space-y-4">
-                <h1 className="text-[32px] md:text-5xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-[32px] md:text-5xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                     {userInfo.name}
                   </span>
@@ -102,7 +99,7 @@ const MyInfo = () => {
               </div>
             </motion.div>
 
-{/* Social Links */}
+            {/* Social Links */}
             <motion.div variants={itemVariants} className="flex gap-4">
               {socialLinks.map((link) => {
                 const Icon = iconMap[link.icon.toLowerCase()];
@@ -138,8 +135,6 @@ const MyInfo = () => {
                 Get In Touch
               </a>
             </motion.div>
-
-            
           </div>
 
           {/* Right Side - Profile Image */}
