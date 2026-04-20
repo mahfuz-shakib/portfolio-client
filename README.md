@@ -4,6 +4,12 @@ A stunning, modern, and fully responsive portfolio website built with React, Vit
 
 ## Live Link : https://mahfuzur-rahman.pages.dev/
 
+## Screenshot (Banner)
+
+<p align="center">
+  <img src="https://i.ibb.co.com/NgnXM5JR/hero.png" >
+</p>
+
 ## ✨ Features
 
 - 🎨 **Modern UI/UX**: Clean, professional design with smooth animations
@@ -130,13 +136,6 @@ Update colors in `tailwind.config.js` or use DaisyUI's theme system.
 6. **Education**: Academic background and certifications
 7. **Contact**: Contact form and social links
 
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio!
-
-## 📜 License
-
-This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
@@ -147,6 +146,6 @@ This project is open source and available under the MIT License.
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 
----
+```
 
 Made with ❤️ using modern web technologies
