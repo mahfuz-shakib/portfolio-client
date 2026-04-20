@@ -63,55 +63,6 @@ portfolio-client/
 └── package.json
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- npm or yarn or pnpm
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone <your-repo-url>
-cd portfolio-client
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Start the development server
-```bash
-npm run dev
-```
-
-4. Open your browser and visit `http://localhost:5173`
-
-### Building for Production
-
-```bash
-npm run build
-```
-
-The production-ready files will be in the `dist` directory.
-
-## 📝 Customizing Your Portfolio
-
-All portfolio data is stored in `public/portfolioData.json`. Simply update this JSON file with your information:
-
-- Personal info (name, role, email, etc.)
-- Social media links
-- About section content
-- Skills and technologies
-- Projects and portfolios
-- Work experience
-- Education and certifications
-
-## 🎨 Customization Options
-
 ### Themes
 
 The portfolio uses DaisyUI themes. You can change the theme in `index.html`:
